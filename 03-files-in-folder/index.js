@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 fs.readdir(path.resolve('03-files-in-folder', 'secret-folder'), (err, files) => {
     if(err) throw err;
-    console.log(files);
+    
     for (var i=0; i<files.length; i++){
 
         let pathFile = path.resolve('03-files-in-folder', 'secret-folder', files[i]);
