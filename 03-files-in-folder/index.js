@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 fs.readdir(path.resolve('03-files-in-folder', 'secret-folder'), (err, files) => {
     if(err) throw err;
-    
+
     for (var i=0; i<files.length; i++){
 
         let pathFile = path.resolve('03-files-in-folder', 'secret-folder', files[i]);
@@ -16,7 +16,7 @@ fs.readdir(path.resolve('03-files-in-folder', 'secret-folder'), (err, files) => 
                 let nameFile = path.basename(pathFile, path.extname(pathFile));
                 let extFile = path.extname(pathFile).slice(1);
                 let sizeFile = stats.size;
-                console.log(nameFile + ' - ' + extFile + ' - ' + sizeFile);
+                console.log(nameFile + ' - ' + extFile + ' - ' + sizeFile + ' byte');
             }
         })
     }
